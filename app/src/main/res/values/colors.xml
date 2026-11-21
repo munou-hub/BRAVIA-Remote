@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#0D1118</color>
+    <color name="panel">#19202B</color>
+    <color name="panel2">#242D3B</color>
+    <color name="white">#F0F4FA</color>
+    <color name="muted">#97A3B5</color>
+    <color name="blue">#2372F4</color>
+    <color name="green">#23BC69</color>
+    <color name="red">#D53743</color>
+    <color name="yt">#B4232D</color>
+    <color name="prime">#1878BE</color>
+</resources>

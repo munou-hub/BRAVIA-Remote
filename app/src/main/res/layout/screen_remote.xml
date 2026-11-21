@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="2dp"
+        android:paddingTop="2dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/btnDisplay"
+            style="@style/BraviaButton"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_panel"
+            android:text="表示" />
+
+        <Button
+            android:id="@+id/btnGuide"
+            style="@style/BraviaButton"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_panel2"
+            android:text="番組表" />
+
+        <FrameLayout
+            android:id="@+id/btnPower"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:background="@drawable/bg_circle_green"
+            android:clickable="true"
+            android:contentDescription="電源"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_power" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="12dp"
+        android:textColor="@color/muted"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.85"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnVolUp"
+                style="@style/BraviaButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/bg_btn_panel"
+                android:text="VOL  ＋" />
+
+            <Button
+                android:id="@+id/btnVolDown"
+                style="@style/BraviaButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/bg_btn_panel"
+                android:text="VOL  −" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnInput"
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="42dp"
+                    android:text="入力"
+                    android:textSize="10sp" />
+
+                <Button
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="42dp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btnOption"
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="42dp"
+                    android:text="オプション"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="52dp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btnUp"
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="52dp"
+                    android:text="↑" />
+
+                <Button
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="52dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnLeft"
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="56dp"
+                    android:text="←" />
+
+                <Button
+                    android:id="@+id/btnConfirm"
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_circle_blue"
+                    android:text="決定"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnRight"
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="56dp"
+                    android:text="→" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="52dp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btnDown"
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="52dp"
+                    android:text="↓" />
+
+                <Button
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="52dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnBack"
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="42dp"
+                    android:text="戻る"
+                    android:textSize="10sp" />
+
+                <Button
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="42dp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btnHome"
+                    style="@style/BraviaDpadButton"
+                    android:layout_height="42dp"
+                    android:text="ホーム"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnTv"
+                style="@style/BraviaButton"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_circle_blue"
+                android:text="TV"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.85"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnChUp"
+                style="@style/BraviaButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/bg_btn_panel"
+                android:text="CH  ＋" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="10dp" />
+
+            <Button
+                android:id="@+id/btnChDown"
+                style="@style/BraviaButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/bg_btn_panel"
+                android:text="CH  −" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/BraviaSection"
+        android:text="数字キー" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnNum1" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="1" />
+            <Button android:id="@+id/btnNum2" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="2" />
+            <Button android:id="@+id/btnNum3" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnNum4" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="4" />
+            <Button android:id="@+id/btnNum5" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="5" />
+            <Button android:id="@+id/btnNum6" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnNum7" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="7" />
+            <Button android:id="@+id/btnNum8" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="8" />
+            <Button android:id="@+id/btnNum9" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnNum10" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="10" />
+            <Button android:id="@+id/btnNum11" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="11" />
+            <Button android:id="@+id/btnNum12" style="@style/BraviaButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_margin="4dp" android:layout_weight="1" android:background="@drawable/bg_btn_panel2" android:text="12" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/BraviaSection"
+        android:text="メディア" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnRewind"
+                style="@style/BraviaMediaButton"
+                android:contentDescription="早戻し"
+                android:src="@drawable/ic_rewind" />
+
+            <ImageButton
+                android:id="@+id/btnPlay"
+                style="@style/BraviaMediaButton"
+                android:contentDescription="再生"
+                android:src="@drawable/ic_play" />
+
+            <ImageButton
+                android:id="@+id/btnFastForward"
+                style="@style/BraviaMediaButton"
+                android:contentDescription="早送り"
+                android:src="@drawable/ic_fast_forward" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnStop"
+                style="@style/BraviaMediaButton"
+                android:contentDescription="停止"
+                android:src="@drawable/ic_stop" />
+
+            <ImageButton
+                android:id="@+id/btnPause"
+                style="@style/BraviaMediaButton"
+                android:contentDescription="一時停止"
+                android:src="@drawable/ic_pause" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/btnHelp"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_media"
+                android:clickable="true"
+                android:contentDescription="ヘルプ"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_help" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="ヘルプ"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnRecordings"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_media"
+                android:clickable="true"
+                android:contentDescription="録画リスト"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_recordings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="録画リスト"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

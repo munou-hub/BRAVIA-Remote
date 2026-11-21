@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="12dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BRAVIA"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="REMOTE CONTROL"
+                    android:textColor="@color/muted"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnGear"
+                style="@style/BraviaButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_btn_panel2"
+                android:text="⚙"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/tabScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/tabRemote"
+                    style="@style/BraviaTabButton"
+                    android:layout_width="78dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/bg_btn_panel"
+                    android:text="リモコン" />
+
+                <Button
+                    android:id="@+id/tabInputs"
+                    style="@style/BraviaTabButton"
+                    android:layout_width="78dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/bg_btn_panel"
+                    android:text="入力切替" />
+
+                <Button
+                    android:id="@+id/tabText"
+                    style="@style/BraviaTabButton"
+                    android:layout_width="78dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/bg_btn_panel"
+                    android:text="文字入力" />
+
+                <Button
+                    android:id="@+id/tabApps"
+                    style="@style/BraviaTabButton"
+                    android:layout_width="78dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/bg_btn_panel"
+                    android:text="アプリ" />
+
+                <Button
+                    android:id="@+id/tabMemo"
+                    style="@style/BraviaTabButton"
+                    android:layout_width="78dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/bg_btn_panel"
+                    android:text="視聴メモ" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <FrameLayout
+            android:id="@+id/screenContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

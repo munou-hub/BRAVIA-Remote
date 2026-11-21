@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/BraviaSection"
+        android:text="入力切替" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="テレビ放送、HDMIなどの入力先を選べます。"
+        android:textColor="@color/muted"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingTop="8dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="8dp"
+        android:text="入力一覧を読み込みます。"
+        android:textColor="@color/muted"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btnRefreshInputs"
+        style="@style/BraviaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_btn_panel2"
+        android:text="入力一覧を更新" />
+
+    <Button
+        android:id="@+id/btnTvBroadcast"
+        style="@style/BraviaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_btn_blue"
+        android:text="テレビ放送へ" />
+
+    <TextView
+        style="@style/BraviaSection"
+        android:text="外部入力" />
+
+    <LinearLayout
+        android:id="@+id/inputList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+</LinearLayout>

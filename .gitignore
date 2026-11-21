@@ -1,0 +1,9 @@
+*.apk
+/app/build/
+/build/
+.gradle/
+local.properties
+# Sony 純正 APK と逆コンパイル成果物は著作物のためリポジトリに含めない（手元に保管）
+/original.apk
+/jadx/
+/dexdump/

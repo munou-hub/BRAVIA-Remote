@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/BraviaSection"
+        android:text="テレビでアプリを起動" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="12dp"
+        android:text="BRAVIAにインストール済みのアプリを検索して起動します。IPコントロール設定とPSKが必要です。"
+        android:textColor="@color/muted"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnYoutube"
+            style="@style/BraviaButton"
+            android:layout_width="0dp"
+            android:layout_height="82dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_yt"
+            android:text="▶  YouTube" />
+
+        <Button
+            android:id="@+id/btnPrime"
+            style="@style/BraviaButton"
+            android:layout_width="0dp"
+            android:layout_height="82dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_prime"
+            android:text="prime video" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingTop="12dp"
+        android:paddingRight="4dp"
+        android:text="アプリ起動の状態がここに表示されます。"
+        android:textColor="@color/muted"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingTop="12dp"
+        android:paddingRight="4dp"
+        android:text="起動できない場合は、テレビに対象アプリがインストールされているか確認してください。"
+        android:textColor="@color/muted"
+        android:textSize="12sp" />
+</LinearLayout>

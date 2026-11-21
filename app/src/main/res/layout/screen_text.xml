@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/BraviaSection"
+        android:text="テレビへ文字入力" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="先にテレビで検索欄などの文字入力画面を開きます。その後、ここに入力して送信してください。"
+        android:textColor="@color/muted"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/tvText"
+        style="@style/BraviaField"
+        android:layout_marginTop="14dp"
+        android:hint="テレビに入力する文字"
+        android:inputType="textAutoCorrect" />
+
+    <Button
+        android:id="@+id/btnSendText"
+        style="@style/BraviaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_blue"
+        android:text="テレビに入力" />
+
+    <Button
+        android:id="@+id/btnSendTextConfirm"
+        style="@style/BraviaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_btn_panel2"
+        android:text="入力して決定" />
+
+    <Button
+        android:id="@+id/btnClearText"
+        style="@style/BraviaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_btn_panel"
+        android:text="スマホ側の文字を消去" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingTop="12dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="4dp"
+        android:text="テレビ側の入力欄が開いている必要があります。"
+        android:textColor="@color/muted"
+        android:textSize="12sp" />
+</LinearLayout>
